@@ -1,0 +1,22 @@
+# Ignore system files
+.DS_Store
+*.swp
+*.bak
+*.log
+
+# Ignore Python environment files
+venv/
+*.pyc
+__pycache__/
+
+# Ignore IDE files (e.g., VSCode, IntelliJ)
+.vscode/
+.idea/
+
+# Ignore temporary files and system files
+*.history
+.cache/
+.conda/
+.config/
+*.pid
+*.bak
