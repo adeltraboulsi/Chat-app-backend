@@ -25,6 +25,11 @@ def translate_message(text: str, target_lang: str = "fr") -> str:
         # In case of failure, return the error message
         return f"[Error: {str(e)}]"
 
+# Root endpoint to handle HTTP GET requests at '/'
+@app.get("/")
+async def read_root():
+    return {"message": "Welcome to the Chat App!"}
+
 @app.websocket("/ws/{username}")
 async def websocket_chat(websocket: WebSocket, username: str):
     await manager.connect(username, websocket)
